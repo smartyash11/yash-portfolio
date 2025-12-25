@@ -2,40 +2,31 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "LegalEase: AI Legal Research & Practice Management System",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
+      "A full-stack platform for the Indian legal community combining AI-powered research with practice management tools. Built with FastAPI, Next.js, and LangChain.",
     image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
+    tags: ["Python", "FastAPI", "Next.js", "LangChain", "Selenium"],
     link: "#",
-    github: "#",
+    github: "https://github.com/smartyash11",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Lerno.ai – Generative AI E-Learning Platform",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
+      "A generative AI e-learning platform that creates animated video lessons and quizzes from a text prompt. Built with React, FastAPI, and LangChain.",
     image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
+    tags: ["React", "Python", "FastAPI", "LangChain", "TypeScript"],
     link: "#",
-    github: "#",
+    github: "https://github.com/smartyash11",
   },
   {
-    title: "AI Writing Assistant",
+    title: "FitPose AI: AI-Powered Fitness Trainer",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
+      "An AI-powered fitness trainer that generates video lessons and analyzes exercise form. Built with Next.js, Python, MediaPipe, and FastAPI.",
     image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
+    tags: ["Next.js", "Python", "MediaPipe", "FastAPI", "LangChain"],
     link: "#",
-    github: "#",
-  },
-  {
-    title: "Project Management Tool",
-    description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
+    github: "https://github.com/smartyash11",
   },
 ];
 
@@ -59,8 +50,7 @@ export const Projects = () => {
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of my recent work, from complex web applications to
-            innovative tools that solve real-world problems.
+            A selection of my recent work, showcasing my skills in building innovative, AI-powered applications.
           </p>
         </div>
 
@@ -88,12 +78,16 @@ export const Projects = () => {
                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
                     href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                   >
                     <ArrowUpRight className="w-5 h-5" />
                   </a>
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                   >
                     <Github className="w-5 h-5" />
@@ -103,17 +97,11 @@ export const Projects = () => {
 
               {/* Content */}
               <div className="p-6 space-y-4">
-                <div className="flex items-start justify-between">
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
                   <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <ArrowUpRight
-                    className="w-5 h-5 
-                  text-muted-foreground group-hover:text-primary
-                   group-hover:translate-x-1 
-                   group-hover:-translate-y-1 transition-all"
-                  />
-                </div>
+                </a>
                 <p className="text-muted-foreground text-sm">
                   {project.description}
                 </p>
@@ -121,7 +109,7 @@ export const Projects = () => {
                   {project.tags.map((tag, tagIdx) => (
                     <span
                       key={tagIdx}
-                      className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300"
+                      className="px-4 py-1.5 rounded-full bg-surface text-xs font-medium border border-border/50 text-muted-foreground"
                     >
                       {tag}
                     </span>
@@ -134,10 +122,12 @@ export const Projects = () => {
 
         {/* View All CTA */}
         <div className="text-center mt-12 animate-fade-in animation-delay-500">
-          <AnimatedBorderButton>
-            View All Projects
-            <ArrowUpRight className="w-5 h-5" />
-          </AnimatedBorderButton>
+          <a href="https://github.com/smartyash11" target="_blank" rel="noopener noreferrer">
+            <AnimatedBorderButton>
+                View All Projects
+                <ArrowUpRight className="w-5 h-5" />
+            </AnimatedBorderButton>
+          </a>
         </div>
       </div>
     </section>
